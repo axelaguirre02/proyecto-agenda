@@ -1,0 +1,193 @@
+:root {
+    --color-primario: #00478f;
+    --color-texto: #e3e3e3;
+    --font-main: Robot-bold;
+    --font-text: Robot-regular;
+}
+
+/* Comienzo de la configuracion principal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: azure;
+    font-family: var(--font-text);
+    color: var(--color-texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main)
+}
+
+@font-face {
+    font-family: Robot-bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Robot-regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* Fin de la configuracion principal */
+
+
+/* Comienzo de la configuracion del diseño */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background: var(--color-primario);
+}
+
+nav, ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+}
+
+nav, ul, li, a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 10px;
+}
+
+nav, ul, li, a:hover {
+    color: var(--color-texto);
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    margin: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-texto);
+    border-radius:  3px;
+    width: 50%;
+    list-style-type: none;
+}
+
+.lista, li {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-texto);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-ver {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn-ver:hover {
+    background-color: white;
+    color: var(--color-primario);
+}
+
+.btn-editar {
+    background-color: rgb(190, 190, 9);
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: white;
+    color: rgb(190, 190, 9);
+}
+
+.btn-borrar {
+    background-color: rgb(109, 5, 5);
+    color: white;
+}
+
+.btn-borrar:hover {
+    background-color: white;
+    color: rgb(109, 5, 5);
+}
+
+.buscar {
+    margin: 20px;
+    width: 50%;
+}
+
+.barra {
+    padding: 7px;
+    width: 90px;
+}
+
+.btn-barra {
+    width: 15%;
+}
+
+.btn-barra:hover {
+    background-color: var(--color-primario);
+}
+
+.aux-btns {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.aux-btns, a {
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.alerta-exito {
+    width: 100%;
+    padding: 10px;
+    background-color: aquamarine;
+    color: white;
+}
+
+/* Fin de la configuracion del diseño */
+
+
+/* Comienzo de la configuracion del inicio */
+
+#secciones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    background-color: var(--color-primario);
+}
+
+.seccion:hover {
+    background-color: var(--color-texto);
+}
+
+/* Fin de la configuracion del inicio */

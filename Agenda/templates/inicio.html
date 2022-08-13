@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}Inicio{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Bienvenido a tu gestor personal</h1>
+
+    <article id="secciones">
+        <section>
+            <h2><a href="{% url 'contacto' %} class="seccion"">CONTACTOS</a></h2>
+        </section>
+        
+        <section>
+            <h2><a href="{% url 'todo' %} class="seccion"">TAREAS</a></h2>
+        </section>
+    </article>
+
+{% endblock contenido %}
+
+{% block scripts %}{% endblock scripts %}

@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}Editar Contacto{% endblock titulo %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock styles %}
+
+{% block contenido %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="alerta-exito"{% endif %}> {{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <span class="aux-btn-form"><a href="{% url 'contacto' %}">Volver atras</a></span>
+
+    <form action="{% url 'editar_contacto' id=id %}" ,method="POST">
+        {% csrf_token %}
+        <table>
+            {{ formulario }}
+        </table>
+        <div class= 'envoltura'>
+            <input type="submit" value="Enviar" class= 'btn-enviar'>
+        </div>
+    </form>
+
+{% endblock contenido %}
